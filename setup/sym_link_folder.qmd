@@ -3,7 +3,7 @@ title: "sym_link_folder"
 format: html
 editor: visual
 ---
-```{bash link dir, eval = FALSE}
+```{bash link dir, eval = T}
 whoami # vscode
 ln -s /workspaces/devcontainers-rstudio /home/rstudio/ws_devcontainers
 ```
