@@ -1,0 +1,27 @@
+---
+title: "sym_link_folder"
+format: html
+editor: visual
+---
+```{bash link dir, eval = FALSE}
+whoami # vscode
+ln -s /workspaces/devcontainers-rstudio /home/rstudio/ws_devcontainers
+```
+
+```{r copy files 1, eval = FALSE}
+# MUST be run inside Rstudion (whoami:rstudio)
+# NOT inside vscode (whoami:vscode)
+
+from <- '/workspaces/devcontainers-rstudio/explore-analyze-data-with-R/solution/all-systems-check'
+list.files(from)
+to <- '/home/rstudio/'
+file.copy(from, to = to, recursive = T)
+# ?file.copy
+list.files(to)
+```
+```{bash copy files 2, eval = FALSE}
+whoami # vscode
+ls /workspaces/devcontainers-rstudio/explore-analyze-data-with-R/solution/all-systems-check
+# touch /home/rstudio/test.txt
+cp -r /workspaces/devcontainers-rstudio/explore-analyze-data-with-R/solution/all-systems-check /home/rstudio
+```
