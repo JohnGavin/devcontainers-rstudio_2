@@ -11,6 +11,11 @@ py_available() %>% stopifnot('python (3.9?) expected' = .)
 # Retrieve/force initialization of Python
 py_config()
 
+# https://rpubs.com/eR_ic/transfoRmers
+# Install Python package into virtual environment
+# reticulate::py_install("transformers", pip = TRUE)
+
+
 # one time install of miniconda, to install pandas
 #   but pandas installed in container
 # py_install('pandas')
