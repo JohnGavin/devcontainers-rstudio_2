@@ -119,7 +119,8 @@ RUN addgroup --system rstudio \
 USER rstudio
 
 # Expose Rstudio port. Log in with rstudio/rstudio
-EXPOSE 8787
+# but only from FROM rocker/tidyverse:${VARIANT} not r2u
+# EXPOSE 8787
 
 # Expose Jupyter port
 EXPOSE 8888
