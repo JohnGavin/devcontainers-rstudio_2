@@ -1,8 +1,8 @@
 # R version: 4, 4.1, 4.0
 ARG VARIANT="4.2"
-#FROM rocker/tidyverse:${VARIANT}
 # Includes packages: devtools tidyverse tidymodels glmnet randomForest xgboost 
-FROM eddelbuettel/r2u:20.04 AS r2u
+FROM rocker/tidyverse:${VARIANT}
+# FROM eddelbuettel/r2u:20.04 AS r2u
 
 LABEL maintainer="john <john@1x2.ltd>"
 
@@ -22,14 +22,21 @@ COPY library-scripts/*.sh /tmp/library-scripts/
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive 
 RUN /bin/bash /tmp/library-scripts/common-debian.sh "${INSTALL_ZSH}" "${USERNAME}" "${USER_UID}" "${USER_GID}" "${UPGRADE_PACKAGES}" "true" "true" 
 RUN usermod -a -G sudo vscode 
+# vscode and rstudio in same group then give group rwx access
+# RUN sudo groupadd staff 
+RUN usermod -a -G staff vscode
+RUN usermod -a -G sudo rstudio 
+RUN usermod -a -G staff rstudio
 #    && usermod -a -G staff ${USERNAME} 
+
 RUN apt-get -y install \
         python3-pip \
         libgit2-dev \
         libcurl4-openssl-dev \
         libssl-dev \
         libxml2-dev \
-        libxt-dev 
+        libxt-dev \
+        rsync
 RUN apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts \
     && python3 -m pip --no-cache-dir install radian \
     && pip --disable-pip-version-check --no-cache-dir install pybryt \
@@ -114,9 +121,9 @@ RUN apt-get update \
 # create Linux group and user, both called app. 
 # 'app' instead of the default root user:
 # https://hosting.analythium.io/dockerizing-shiny-applications/
-RUN addgroup --system rstudio \
-     && adduser --system --ingroup rstudio rstudio
-USER rstudio
+#RUN addgroup --system rstudio \
+#     && adduser --system --ingroup rstudio rstudio
+# USER rstudio
 
 # Expose Rstudio port. Log in with rstudio/rstudio
 # but only from FROM rocker/tidyverse:${VARIANT} not r2u
@@ -127,3 +134,26 @@ EXPOSE 8888
 
 CMD ["/init"]
 # CMD ["R", "-e", "shiny::runApp('/home/app')"]
+
+# link github folder inside rstudio 
+# RUN sudo ln -s /workspaces/devcontainers-rstudio/* /home/rstudio
+# sudo unlink /workspaces/devcontainers-rstudio/*
+# https://unix.stackexchange.com/questions/492777/how-should-i-merge-two-folders-on-the-same-filesystem
+# RUN  rsync -PHACcviuma --copy-unsafe-links --exclude="*~"  /workspaces/devcontainers-rstudio/  /home/rstudio/ 
+USER vscode
+# RUN usermod -a -G sudo rstudio 
+RUN sudo mkdir -p /workspaces/devcontainers-rstudio \
+    && sudo chmod g+rwx /workspaces/devcontainers-rstudio \
+    && sudo touch /workspaces/devcontainers-rstudio/zzz2.txt 
+# chown -R vscode:staff Resources
+RUN sudo mkdir -p /home/rstudio \
+    && sudo chmod g+rwx /home/rstudio \
+    && sudo touch /home/rstudio/zzz.txt 
+RUN sudo chgrp -R staff /workspaces/devcontainers-rstudio/
+RUN sudo chgrp -R staff /home/rstudio/
+RUN sudo ln -s /workspaces/devcontainers-rstudio/* /home/rstudio
+# RUN sudo rsync -PHACcvium --copy-unsafe-links --exclude="*~"  /home/rstudio /workspaces/devcontainers-rstudio  
+#RUN sudo rsync -avzPtu /workspaces/devcontainers-rstudio/* /home/rstudio
+#RUN sudo rsync -avzPtu /home/rstudio/* /workspaces/devcontainers-rstudio
+# avzP
+

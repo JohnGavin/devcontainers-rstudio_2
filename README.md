@@ -1,4 +1,4 @@
-# Zero-setup R workshops with GitHub Codespaces
+# Zzero-setup R workshops with GitHub Codespaces
 
 This is the repository supporting the presentation "Zero-setup R workshops with GitHub Codespaces".
 

@@ -1,0 +1,42 @@
+]0;/workspaces/devcontainers-rstudio]0;rstudio@codespaces-0dfbe4: /workspaces/devcontainers-rstudio[01;32mrstudio@codespaces-0dfbe4[00m:[01;34m/workspaces/devcontainers-rstudio[00m$ whoami
+rstudio
+]0;/workspaces/devcontainers-rstudio]0;rstudio@codespaces-0dfbe4: /workspaces/devcontainers-rstudio[01;32mrstudio@codespaces-0dfbe4[00m:[01;34m/workspaces/devcontainers-rstudio[00m$ pwd
+/workspaces/devcontainers-rstudio
+]0;/workspaces/devcontainers-rstudio]0;rstudio@codespaces-0dfbe4: /workspaces/devcontainers-rstudio[01;32mrstudio@codespaces-0dfbe4[00m:[01;34m/workspaces/devcontainers-rstudio[00m$ ls -a
+[0m[40;31;01m'*'[0m              [34;42m.git[0m               [01;34m.rstudio[0m     test4.out
+ [01;34m.[0m               [34;42minst[0m               [01;34mrstudio[0m      UntitledRMD.Rmd
+ [34;42m..[0m              [34;42mmypackage[0m          [01;34mtest1_dir[0m    UntitledR.R
+ .bash_logout    .profile           test1.outt
+ .bashrc         README.md          [34;42mtest2_dir[0m
+ [34;42m.devcontainer[0m   requirements.txt   test3.out
+]0;/workspaces/devcontainers-rstudio]0;rstudio@codespaces-0dfbe4: /workspaces/devcontainers-rstudio[01;32mrstudio@codespaces-0dfbe4[00m:[01;34m/workspaces/devcontainers-rstudio[00m$ [K]0;rstudio@codespaces-0dfbe4: /workspaces/devcontainers-rstudio[01;32mrstudio@codespaces-0dfbe4[00m:[01;34m/workspaces/devcontainers-rstudio[00m$ ls -a
+[0m[40;31;01m'*'[0m              [34;42m.git[0m               [01;34m.rstudio[0m     test4.out
+ [01;34m.[0m               [34;42minst[0m               [01;34mrstudio[0m      UntitledRMD.Rmd
+ [34;42m..[0m              [34;42mmypackage[0m          [01;34mtest1_dir[0m    UntitledR.R
+ .bash_logout    .profile           test1.outt
+ .bashrc         README.md          [34;42mtest2_dir[0m
+ [34;42m.devcontainer[0m   requirements.txt   test3.out
+]0;/workspaces/devcontainers-rstudio]0;rstudio@codespaces-0dfbe4: /workspaces/devcontainers-rstudio[01;32mrstudio@codespaces-0dfbe4[00m:[01;34m/workspaces/devcontainers-rstudio[00m$ ls -a
+[0m[40;31;01m'*'[0m              [34;42m.git[0m               [01;34m.rstudio[0m     test4.out
+ [01;34m.[0m               [34;42minst[0m               [01;34mrstudio[0m      UntitledRMD.Rmd
+ [34;42m..[0m              [34;42mmypackage[0m          [01;34mtest1_dir[0m    UntitledR.R
+ .bash_logout    .profile           test1.outt
+ .bashrc         README.md          [34;42mtest2_dir[0m
+ [34;42m.devcontainer[0m   requirements.txt   test3.out
+]0;/workspaces/devcontainers-rstudio]0;rstudio@codespaces-0dfbe4: /workspaces/devcontainers-rstudio[01;32mrstudio@codespaces-0dfbe4[00m:[01;34m/workspaces/devcontainers-rstudio[00m$ ls -a
+[0m[40;31;01m'*'[0m              [34;42m.git[0m               [01;34m.rstudio[0m     test4.out
+ [01;34m.[0m               [34;42minst[0m               [01;34mrstudio[0m      UntitledRMD.Rmd
+ [34;42m..[0m              [34;42mmypackage[0m          [01;34mtest1_dir[0m    UntitledR.R
+ .bash_logout    .profile           test1.outt
+ .bashrc         README.md          [34;42mtest2_dir[0m
+ [34;42m.devcontainer[0m   requirements.txt   test3.out
+]0;/workspaces/devcontainers-rstudio]0;rstudio@codespaces-0dfbe4: /workspaces/devcontainers-rstudio[01;32mrstudio@codespaces-0dfbe4[00m:[01;34m/workspaces/devcontainers-rstudio[00m$ ls -a
+[0m[40;31;01m'*'[0m              [34;42m.git[0m               [01;34m.rstudio[0m     test4.out
+ [01;34m.[0m               [34;42minst[0m               [01;34mrstudio[0m      UntitledRMD.Rmd
+ [34;42m..[0m              [34;42mmypackage[0m          [01;34mtest1_dir[0m    UntitledR.R
+ .bash_logout    .profile           test1.outt
+ .bashrc         README.md          [34;42mtest2_dir[0m
+ [34;42m.devcontainer[0m   requirements.txt   test3.out
+]0;/workspaces/devcontainers-rstudio]0;rstudio@codespaces-0dfbe4: /workspaces/devcontainers-rstudio[01;32mrstudio@codespaces-0dfbe4[00m:[01;34m/workspaces/devcontainers-rstudio[00m$ ls -a /home/rstudio/
+[0m[01;34m.[0m  [01;34m..[0m  .bash_logout  .bashrc  [01;34m.config[0m  [01;34m.local[0m  .profile  UntitledPY.py
+]0;/workspaces/devcontainers-rstudio]0;rstudio@codespaces-0dfbe4: /workspaces/devcontainers-rstudio[01;32mrstudio@codespaces-0dfbe4[00m:[01;34m/workspaces/devcontainers-rstudio[00m$ 
